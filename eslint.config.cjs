@@ -91,7 +91,7 @@ module.exports = {
 
     // Unicorn plugin
     'unicorn/switch-case-braces': ['error', 'avoid'],
-    'unicorn/filename-case': ['error', { case: 'snakeCase' }],
+    'unicorn/filename-case': ['error', { case: 'kebabCase' }],
     'unicorn/consistent-function-scoping': ['error', { "checkArrowFunctions": false }],
     'unicorn/prevent-abbreviations': ['error', {
       "allowList": {
