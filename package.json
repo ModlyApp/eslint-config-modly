@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-modly",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "@terrahop",
   "description": "Eslint configuration for Modly",
   "private": true,
