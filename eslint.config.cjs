@@ -93,13 +93,15 @@ module.exports = {
     'unicorn/switch-case-braces': ['error', 'avoid'],
     'unicorn/filename-case': ['error', { case: 'kebabCase' }],
     'unicorn/consistent-function-scoping': ['error', { "checkArrowFunctions": false }],
-    'unicorn/prevent-abbreviations': ['error', {
-      "allowList": {
-        "mod": true,
-        "Mod": true,
-        "src": true
-      }
-    }],
+    'unicorn/prevent-abbreviations': 0,
+    // 'unicorn/prevent-abbreviations': ['error', {
+    //   "allowList": {
+    //     "mod": true,
+    //     "Mod": true,
+    //     "src": true,
+    //     "db": true
+    //   }
+    // }],
 
     // Security plugin
     'security/detect-object-injection': 0,
