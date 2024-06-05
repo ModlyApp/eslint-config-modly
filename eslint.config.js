@@ -81,7 +81,7 @@ export default [
       'unicorn/switch-case-braces': ['error', 'avoid'],
       'unicorn/filename-case': ['error', { case: 'kebabCase' }],
       'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],
-      // 'unicorn/prevent-abbreviations': 0,
+      'unicorn/prevent-abbreviations': 0,
 
       // Security plugin
       'security/detect-object-injection': 0
