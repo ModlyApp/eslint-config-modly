@@ -15,13 +15,13 @@ const ecmaVersion = 2021
 export default [
   ...compat.config({
     extends: [
-      'plugin:sonarjs/recommended',
+      'plugin:sonarjs/recommended-legacy',
       'plugin:@typescript-eslint/strict-type-checked',
       'plugin:@typescript-eslint/stylistic-type-checked',
       'plugin:svelte/recommended',
       'plugin:jsdoc/recommended-typescript',
       'plugin:unicorn/recommended',
-      'standard-with-typescript'
+      'love'
     ],
     plugins: [
       '@typescript-eslint',
@@ -81,7 +81,7 @@ export default [
       'unicorn/switch-case-braces': ['error', 'avoid'],
       'unicorn/filename-case': ['error', { case: 'kebabCase' }],
       'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],
-      'unicorn/prevent-abbreviations': 0,
+      // 'unicorn/prevent-abbreviations': 0,
 
       // Security plugin
       'security/detect-object-injection': 0
@@ -98,20 +98,13 @@ export default [
       },
       rules: {
         // Core
-        // "no-self-assign": 0, // In svelte this is used to reactively update a variable after using .push, .map etc.
-        // 'no-undef-init': 0, // Svelte props are considered optional when initialized
-        // 'no-undef': 0, // Svelte has accessors that don't need to be defined. ie, Nodejs
-        // "no-extra-boolean-cast": 1, // Ensure we don't mix Boolean() and !!
-        '@typescript-eslint/no-unsafe-assignment': 0, // Does not work with svelte's $bindable prop
         '@typescript-eslint/no-unsafe-call': 0, // Does not work with svelte's $bindable prop
 
         // Unicorn plugin
         // Enforce pascal case for svelte files, ignore sveltekit's special files like +page.svelte
         'unicorn/filename-case': ['error', { case: 'pascalCase', ignore: [/^\+.*\.svelte$/] }],
-        // 'unicorn/no-useless-undefined': 0, // Svelte props are considered optional when initialized with 'undefined'
 
         // Svelte plugin
-        // Stricter and more opinionated svelte specific rules that are not enabled with 'plugin:svelte/recommended'.
         'svelte/infinite-reactive-loop': 1,
         'svelte/no-store-async': 1,
         'svelte/no-target-blank': 1,
@@ -119,13 +112,12 @@ export default [
         'svelte/no-reactive-functions': 1,
         'svelte/no-reactive-literals': 1,
         'svelte/no-useless-mustaches': 1,
-        'svelte/prefer-destructured-store-props': 0, // Invalid with svelte runes
+        // 'svelte/prefer-destructured-store-props': 0, // Invalid with svelte runes
         'svelte/require-optimized-style-attribute': 1,
         'svelte/valid-each-key': 1,
 
         // Typescript plugin
         "@typescript-eslint/no-unnecessary-condition": 0, // Optional svelte props require initial assignment causing type issues for existence checks
-        // "@typescript-eslint/non-nullable-type-assertion-style": 0,
 
         // Sonarjs plugin
         'sonarjs/no-unused-collection': 0, // Doesn't work with svelte processor at all.

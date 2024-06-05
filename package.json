@@ -6,19 +6,27 @@
   "private": true,
   "type": "module",
   "main": "index.js",
+  "scripts": {
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "changelog-template.hbs",
+    "commitLimit": false
+  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
     "eslint": "^8.57.0",
-    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-config-love": "^47.0.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-jsdoc": "^48.2.1",
-    "eslint-plugin-security": "^2.1.1",
-    "eslint-plugin-sonarjs": "^0.24.0",
-    "eslint-plugin-svelte": "2.36.0-next.13",
-    "eslint-plugin-unicorn": "^51.0.1",
-    "svelte": "5.0.0-next.83",
-    "svelte-eslint-parser": "0.34.0-next.12"
+    "eslint-plugin-jsdoc": "^48.2.7",
+    "eslint-plugin-security": "^3.0.0",
+    "eslint-plugin-sonarjs": "^1.0.3",
+    "eslint-plugin-svelte": "2.39.0",
+    "eslint-plugin-unicorn": "^53.0.0",
+    "svelte": "5.0.0-next.149",
+    "svelte-eslint-parser": "0.36.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.2",
