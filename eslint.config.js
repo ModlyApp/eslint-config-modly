@@ -99,6 +99,7 @@ export default [
       rules: {
         // Core
         '@typescript-eslint/no-unsafe-call': 0, // Does not work with svelte's $bindable prop
+        '@typescript-eslint/no-unsafe-assignment': 0, // Does not work with svelte's $bindable prop
 
         // Unicorn plugin
         // Enforce pascal case for svelte files, ignore sveltekit's special files like +page.svelte
