@@ -43,6 +43,7 @@ export default [
           "@typescript-eslint/no-unsafe-assignment",
           "@typescript-eslint/no-unsafe-member-access",
           "@typescript-eslint/no-unsafe-argument",
+          "@typescript-eslint/no-unsafe-return",
           "@typescript-eslint/promise-function-async",
           "sonarjs/no-extra-arguments", // Does not pickup svelte's snippet args
           "sonarjs/no-use-of-empty-return-value", // Does not work with svelte's snippets
